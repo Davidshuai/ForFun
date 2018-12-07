@@ -78,7 +78,7 @@ body {
 }
 
 #shineflip-pages section.page {
-    //background-color: #fafafa;
+    /* background-color: #fafafa; */
 	display: block;
 	position: absolute;
 	overflow: hidden;
