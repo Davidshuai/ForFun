@@ -1,14 +1,7 @@
 var radius = 10;
-alert("load22")
-alert(radius)
 var restitution = 0.5;
-alert("load33")
-alert(restitution)
-
 var mass = 1;
 var kradius = 10;
-alert("load55")
-alert(kradius)
 var kradius2 = kradius * kradius;
 var kradius3 =  kradius2 * kradius;
 var kradius5 =  kradius3 * kradius2;
@@ -255,6 +248,7 @@ function start() {
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
+    alert(window.location.search.substr(1)  || 'TFFZ')
     text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
     alert("initover")
     var t = 0, p = 100, c = 0;
