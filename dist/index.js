@@ -238,8 +238,8 @@ function render() {
 }
 
 function playCotrol() {
-    audio.addEventListener("loadeddata", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
-        function() {
+    audio.addEventListener("loadeddata",
+        function () {
         audio.play();
     });
     // document.addEventListener("touchstart", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
@@ -252,8 +252,7 @@ function playCotrol() {
 function getSong() { 
     audio = document.getElementById("audio");
     audio.loop = true; //歌曲循环
-    playCotrol(); //播放控制函数
-    audio.src = "1.mp3";
+    // playCotrol(); //播放控制函数
 }
 
 function start() {
