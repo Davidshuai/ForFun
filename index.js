@@ -2,11 +2,15 @@ var radius = 10;
 alert("load22")
 alert(radius)
 var restitution = 0.5;
+alert("load33")
+alert(restitution)
 var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
 // var text = b64DecodeUnicode(window.location.search.substr(1) || '5YiY5YCp6ZKw');
 
 var mass = 1;
 var kradius = 10;
+alert("load44")
+alert(kradius)
 var kradius2 = kradius * kradius;
 var kradius3 =  kradius2 * kradius;
 var kradius5 =  kradius3 * kradius2;
