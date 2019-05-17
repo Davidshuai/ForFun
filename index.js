@@ -238,17 +238,15 @@ function render() {
 }
 
 function playCotrol() {
-    alert("aa")
     audio.addEventListener("loadeddata", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
         function() {
-    alert("bb")
         audio.play();
     });
-    document.addEventListener("touchstart", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
-        function() {
-    alert("cc")
-        audio.play();
-    })
+    // document.addEventListener("touchstart", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
+    //     function() {
+    // alert("cc")
+    //     .play();
+    // })
 }
 
 function getSong() { 
