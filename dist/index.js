@@ -1,9 +1,3 @@
-<html>
-<head>
-<meta charset="UTF-8">
-<script src="index.js"></script>
-<title>Love</title>
-<!-- <script type="text/javascript">
 Vector2 = function(x, y) { this.x = x; this.y = y; };
 Vector2.prototype = {
     len : function() { return Math.sqrt(this.x * this.x + this.y * this.y); },
@@ -249,9 +243,3 @@ function start() {
     loop();
     alert("startover")
 }
-</script> -->
-</head>
-<canvas id="canvas1" width="512" height="512" style="margin: auto; height: 100%"></canvas>
-<body onload="start()" style="display:grid; height: 100%">
-</body>
-</html>
