@@ -16,8 +16,7 @@ var targetDensity = 0.001;
 var stiffness = 50000;
 var viscocity = 100;
 
-const text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
-// var text = "LQY";
+let text = "zs";
 alert("load77")
 alert(text)
 
@@ -256,6 +255,7 @@ function start() {
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
+    text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
     alert("initover")
     var t = 0, p = 100, c = 0;
     var loop = function() {
