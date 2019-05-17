@@ -1,3 +1,22 @@
+var radius = 10;
+alert("load22")
+alert(radius)
+var restitution = 0.5;
+var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+// var text = b64DecodeUnicode(window.location.search.substr(1) || '5YiY5YCp6ZKw');
+
+var mass = 1;
+var kradius = 10;
+var kradius2 = kradius * kradius;
+var kradius3 =  kradius2 * kradius;
+var kradius5 =  kradius3 * kradius2;
+var targetDensity = 0.001;
+var stiffness = 50000;
+var viscocity = 100;
+
+var particles = [];
+var neighborIndices = [];
+
 class Vector2{
     constructor(x, y) {
         this.x = x;
@@ -11,7 +30,7 @@ class Vector2{
     div (f) { var invf = 1/f; return new Vector2(this.x * invf, this.y * invf); };
     dot (v) { return this.x * v.x + this.y * v.y; };
     refl (n) { return this.sub(n.mul(this.dot(n)));}
-}
+};
 // Vector2.prototype = {
 //     len : function() { return Math.sqrt(this.x * this.x + this.y * this.y); },
 //     norm : function() { return this.mul(1/this.len()); },
@@ -24,6 +43,9 @@ class Vector2{
 // };
 Vector2.zero = new Vector2(0, 0);
 
+var g = new Vector2(0, 100);
+
+
 class Particle {
     constructor(position, velocity, text) {
         this.position = position;
@@ -33,31 +55,11 @@ class Particle {
         this.density = Vector2.zero;
         this.pressure = 0;
     }
-}
-;
+};
 
 function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(match, p1) { return String.fromCharCode('0x' + p1); })); }
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
 
-var g = new Vector2(0, 100);
-var radius = 10;
-var restitution = 0.5;
-var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
-// var text = b64DecodeUnicode(window.location.search.substr(1) || '5YiY5YCp6ZKw');
-
-var mass = 1;
-var kradius = 10;
-alert("load")
-alert(kradius)
-var kradius2 = kradius * kradius;
-var kradius3 =  kradius2 * kradius;
-var kradius5 =  kradius3 * kradius2;
-var targetDensity = 0.001;
-var stiffness = 50000;
-var viscocity = 100;
-
-var particles = [];
-var neighborIndices = [];
 
 function init() {
     alert("init")
