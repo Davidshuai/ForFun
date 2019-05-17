@@ -248,8 +248,8 @@ function start() {
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
-    alert(window.location.search.substr(1)  || 'TFFZ')
-    text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+    alert(window.location.search.substr(1)  || "TFFZ")
+    text = b64DecodeUnicode(window.location.search.substr(1) || "TFFZ");
     alert("initover")
     var t = 0, p = 100, c = 0;
     var loop = function() {
