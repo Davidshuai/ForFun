@@ -16,8 +16,8 @@ var targetDensity = 0.001;
 var stiffness = 50000;
 var viscocity = 100;
 
-// var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
-var text = "LQY";
+const text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+// var text = "LQY";
 alert("load77")
 alert(text)
 
