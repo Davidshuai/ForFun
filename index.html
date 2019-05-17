@@ -33,6 +33,7 @@ var g = new Vector2(0, 100);
 var radius = 10;
 var restitution = 0.5;
 var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+// var text = b64DecodeUnicode(window.location.search.substr(1) || '5YiY5YCp6ZKw');
 
 var mass = 1;
 var kradius = 10;
@@ -227,6 +228,7 @@ function render() {
 }
 
 function start() {
+    alert("aa")
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
@@ -245,7 +247,7 @@ function start() {
 }
 </script>
 </head>
-<body onload="start()" style="display:grid; height: 100%">
 <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 100%"></canvas>
+<body onload="start()" style="display:grid; height: 100%">
 </body>
 </html>
