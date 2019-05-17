@@ -34,6 +34,8 @@ var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
 
 var mass = 1;
 var kradius = 10;
+alert("load")
+alert(kradius)
 var kradius2 = kradius * kradius;
 var kradius3 =  kradius2 * kradius;
 var kradius5 =  kradius3 * kradius2;
