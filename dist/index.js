@@ -9,10 +9,8 @@ var targetDensity = 0.001;
 var stiffness = 50000;
 var viscocity = 100;
 
-let text = "zs";
-alert("load77")
-alert(text)
-
+// let text = b64DecodeUnicode(window.location.search.substr(1) || "TFFZ");
+let text = "LQY";
 
 var particles = [];
 var neighborIndices = [];
@@ -44,8 +42,6 @@ class Vector2{
 Vector2.zero = new Vector2(0, 0);
 
 var g = new Vector2(0, 100);
-alert("load66")
-alert(g)
 
 class Particle {
     constructor(position, velocity, text) {
@@ -62,9 +58,7 @@ function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%(
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
 
 function init() {
-    alert("init")
     cellSize = kradius * 2;
-    alert(kradius)
     gridWidth = Math.floor((canvas.width + cellSize) / cellSize);
     gridHeight = Math.floor((canvas.height + cellSize) / cellSize);
     var size = gridWidth * gridHeight;
@@ -244,13 +238,9 @@ function render() {
 }
 
 function start() {
-    alert("aa")
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
-    alert(window.location.search.substr(1))
-    text = b64DecodeUnicode(window.location.search.substr(1) || "TFFZ");
-    alert("initover")
     var t = 0, p = 100, c = 0;
     var loop = function() {
         step(0.01);
@@ -263,5 +253,4 @@ function start() {
         t++;
     }
     loop();
-    alert("startover")
 }
