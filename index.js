@@ -11,14 +11,17 @@ Vector2.prototype = {
 };
 Vector2.zero = new Vector2(0, 0);
 
-function Particle(position, velocity, text) {
-    this.position = position;
-    this.velocity = velocity;
-    this.text = text;
-    this.acceleration = Vector2.zero;
-    this.density = Vector2.zero;
-    this.pressure = 0;
-};
+class Particle {
+    constructor(position, velocity, text) {
+        this.position = position;
+        this.velocity = velocity;
+        this.text = text;
+        this.acceleration = Vector2.zero;
+        this.density = Vector2.zero;
+        this.pressure = 0;
+    }
+}
+;
 
 function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(match, p1) { return String.fromCharCode('0x' + p1); })); }
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
