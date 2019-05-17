@@ -16,6 +16,12 @@ var targetDensity = 0.001;
 var stiffness = 50000;
 var viscocity = 100;
 
+// var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+var text = "LQY";
+alert("load77")
+alert(text)
+
+
 var particles = [];
 var neighborIndices = [];
 
@@ -62,10 +68,6 @@ class Particle {
 
 function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(match, p1) { return String.fromCharCode('0x' + p1); })); }
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
-
-window.text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
-alert("load77")
-alert(window.text)
 
 function init() {
     alert("init")
@@ -261,7 +263,7 @@ function start() {
         render();
         setTimeout(loop, 10);
         if (particles.length < 1314 && t % Math.floor(p) == 0) {
-            particles.push(new Particle(new Vector2(canvas.width / 2, canvas.height / 5), new Vector2(Math.random() * 20 - 10, 0), window.text.charAt(c++ % window.text.length)));
+            particles.push(new Particle(new Vector2(canvas.width / 2, canvas.height / 5), new Vector2(Math.random() * 20 - 10, 0), text.charAt(c++ % text.length)));
             p = Math.max(p * 0.98, 1);
         }
         t++;
