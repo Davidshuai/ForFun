@@ -5,7 +5,6 @@ var restitution = 0.5;
 alert("load33")
 alert(restitution)
 var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
-// var text = b64DecodeUnicode(window.location.search.substr(1) || '5YiY5YCp6ZKw');
 
 var mass = 1;
 var kradius = 10;
