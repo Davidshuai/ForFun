@@ -46,7 +46,8 @@ class Vector2{
 Vector2.zero = new Vector2(0, 0);
 
 var g = new Vector2(0, 100);
-
+alert("load66")
+alert(g)
 
 class Particle {
     constructor(position, velocity, text) {
@@ -63,6 +64,8 @@ function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%(
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
 
 var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
+alert("load77")
+alert(text)
 
 function init() {
     alert("init")
