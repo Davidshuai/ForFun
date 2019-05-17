@@ -4,7 +4,6 @@ alert(radius)
 var restitution = 0.5;
 alert("load33")
 alert(restitution)
-var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
 
 var mass = 1;
 var kradius = 10;
@@ -63,6 +62,7 @@ class Particle {
 function b64EncodeUnicode(str) { return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(match, p1) { return String.fromCharCode('0x' + p1); })); }
 function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').map(function(c) {return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
 
+var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
 
 function init() {
     alert("init")
