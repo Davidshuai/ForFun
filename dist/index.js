@@ -252,7 +252,8 @@ function playCotrol() {
 function getSong() { 
     audio = document.getElementById("audio");
     audio.loop = true; //歌曲循环
-    // playCotrol(); //播放控制函数
+    playCotrol(); //播放控制函数
+    audio.src = "1.mp3"
 }
 
 function start() {
