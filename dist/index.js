@@ -1,14 +1,27 @@
-Vector2 = function(x, y) { this.x = x; this.y = y; };
-Vector2.prototype = {
-    len : function() { return Math.sqrt(this.x * this.x + this.y * this.y); },
-    norm : function() { return this.mul(1/this.len()); },
-    add : function(v) { return new Vector2(this.x + v.x, this.y + v.y); },
-    sub : function(v) { return new Vector2(this.x - v.x, this.y - v.y); },
-    mul : function(f) { return new Vector2(this.x * f, this.y * f); },
-    div : function(f) { var invf = 1/f; return new Vector2(this.x * invf, this.y * invf); },
-    dot : function(v) { return this.x * v.x + this.y * v.y; },
-    refl : function(n) { return this.sub(n.mul(this.dot(n)));}
-};
+class Vector2{
+    constructor(x, y) {
+        this.x = x;
+        this.y = y; 
+    };
+    len () { return Math.sqrt(this.x * this.x + this.y * this.y); };
+    norm () { return this.mul(1/this.len()); };
+    add (v) { return new Vector2(this.x + v.x, this.y + v.y); };
+    sub (v) { return new Vector2(this.x - v.x, this.y - v.y); };
+    mul (f) { return new Vector2(this.x * f, this.y * f); };
+    div (f) { var invf = 1/f; return new Vector2(this.x * invf, this.y * invf); };
+    dot (v) { return this.x * v.x + this.y * v.y; };
+    refl (n) { return this.sub(n.mul(this.dot(n)));}
+}
+// Vector2.prototype = {
+//     len : function() { return Math.sqrt(this.x * this.x + this.y * this.y); },
+//     norm : function() { return this.mul(1/this.len()); },
+//     add : function(v) { return new Vector2(this.x + v.x, this.y + v.y); },
+//     sub : function(v) { return new Vector2(this.x - v.x, this.y - v.y); },
+//     mul : function(f) { return new Vector2(this.x * f, this.y * f); },
+//     div : function(f) { var invf = 1/f; return new Vector2(this.x * invf, this.y * invf); },
+//     dot : function(v) { return this.x * v.x + this.y * v.y; },
+//     refl : function(n) { return this.sub(n.mul(this.dot(n)));}
+// };
 Vector2.zero = new Vector2(0, 0);
 
 class Particle {
