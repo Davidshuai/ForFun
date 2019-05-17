@@ -8,7 +8,7 @@ var text = b64DecodeUnicode(window.location.search.substr(1) || 'TFFZ');
 
 var mass = 1;
 var kradius = 10;
-alert("load44")
+alert("load55")
 alert(kradius)
 var kradius2 = kradius * kradius;
 var kradius3 =  kradius2 * kradius;
