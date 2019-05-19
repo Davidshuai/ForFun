@@ -267,9 +267,9 @@ function start() {
     init();
     var t = 0, p = 100, c = 0;
     var loop = function() {
-        step(0.01);
+        step(0.005);
         render();
-        setTimeout(loop, 10);
+        setTimeout(loop, 20);
         if (particles.length < 1314 && t % Math.floor(p) == 0) {
             particles.push(new Particle(new Vector2(canvas.width / 2, canvas.height / 5), new Vector2(Math.random() * 20 - 10, 0), text.charAt(c++ % text.length)));
             p = Math.max(p * 0.98, 1);
