@@ -240,7 +240,12 @@ function render() {
 function playCotrol() {
     audio.addEventListener("loadeddata",
         function () {
-        audio.play();
+        // audio.play();
+        // start()
+    });
+        audio.addEventListener("play",
+        function () {
+        start()
     });
     // document.addEventListener("touchstart", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
     //     function() {
@@ -257,7 +262,6 @@ function getSong() {
 }
 
 function start() {
-    getSong()
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
     init();
