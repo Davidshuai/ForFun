@@ -258,7 +258,7 @@ function getSong() {
     audio = document.getElementById("audio");
     audio.loop = true; //歌曲循环
     playCotrol(); //播放控制函数
-    audio.src = "http://fs.w.kugou.com/201905200013/0938a311841bb55f992d205ff4cbe9b7/G126/M0A/06/07/HocBAFqWqw6AKxmcADX3sA0k39o695.mp3"
+    audio.src = "http://fs.w.kugou.com/201905251823/a37322e85c0c665ccdc50ed4c7892d6c/G140/M02/06/14/zA0DAFuosJqAPV_xADoWzFGBZYA491.mp3"
 }
 
 function start() {
