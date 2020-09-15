@@ -258,7 +258,7 @@ function getSong() {
     audio = document.getElementById("audio");
     audio.loop = true; //歌曲循环
     playCotrol(); //播放控制函数
-    audio.src = "http://fs.w.kugou.com/201905251823/a37322e85c0c665ccdc50ed4c7892d6c/G140/M02/06/14/zA0DAFuosJqAPV_xADoWzFGBZYA491.mp3"
+    audio.src = "https://www.kugou.com/song/#hash=3C5605A1800F96C6AA1EFECE8B958371&album_id=8546946"
 }
 
 function start() {
